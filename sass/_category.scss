@@ -1,0 +1,69 @@
+// Workout Categories
+$categories: "ball",
+             "ballet",
+             "bosu",
+             "cardio",
+             "circuit",
+             "kettlebell",
+             "kickbox",
+             "pilates",
+             "spinning",
+             "step",
+             "strength",
+             "yoga";
+
+#category #main {
+  height: 468px;
+}
+
+#listing {
+  ul {
+    line-height: 50px;
+    @include rounded(10px);
+  }
+
+  img {
+    padding-right: 8px;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      width: 200px;
+      margin: 10px;
+      display: block;
+      float: left;
+      line-height: 50px;
+      color:  $base;
+      font-size: 1.3em;
+      margin-left: 1em;
+      @extend %transition;
+
+      &:hover {
+        @include rounded(8px);
+        background-color: $accent;
+      }
+    }
+  }
+}
+
+@each $category in $categories {
+  .#{$category} {
+    background: $accent url(../images/icon/#{$category}.png) no-repeat;
+  }
+}
+
+.category span {
+  display: inline-block;
+  width: 50px;
+  margin-right: 8px;
+  @include rounded(8px);
+  &:after {
+    content: ".";
+    color: $accent;
+  }
+  &.spinning:after {
+    color: #fff;
+  }
+}
