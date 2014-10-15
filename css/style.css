@@ -507,44 +507,110 @@ span.overlay img {
 }
 
 @-webkit-keyframes adAnimation {
-  /* line 20, _animate.scss */
+  /* line 22, _animate.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 21, _animate.scss */
+  /* line 23, _animate.scss */
   5%, 20% {
     opacity: 1;
   }
 
-  /* line 22, _animate.scss */
+  /* line 24, _animate.scss */
   25%, 100% {
     opacity: 0;
   }
 }
-/* line 27, _animate.scss */
+@-moz-keyframes adAnimation {
+  /* line 22, _animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 23, _animate.scss */
+  5%, 20% {
+    opacity: 1;
+  }
+
+  /* line 24, _animate.scss */
+  25%, 100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes adAnimation {
+  /* line 22, _animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 23, _animate.scss */
+  5%, 20% {
+    opacity: 1;
+  }
+
+  /* line 24, _animate.scss */
+  25%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes adAnimation {
+  /* line 22, _animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 23, _animate.scss */
+  5%, 20% {
+    opacity: 1;
+  }
+
+  /* line 24, _animate.scss */
+  25%, 100% {
+    opacity: 0;
+  }
+}
+/* line 33, _animate.scss */
 .ad .msg {
   -webkit-animation: adAnimation 20s infinite;
+  -moz-animation: adAnimation 20s infinite;
+  -o-animation: adAnimation 20s infinite;
+  animation: adAnimation 20s infinite;
 }
-/* line 31, _animate.scss */
+/* line 40, _animate.scss */
 .ad .msg:nth-of-type(1) {
   -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
 }
-/* line 31, _animate.scss */
+/* line 40, _animate.scss */
 .ad .msg:nth-of-type(2) {
   -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
 }
-/* line 31, _animate.scss */
+/* line 40, _animate.scss */
 .ad .msg:nth-of-type(3) {
   -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -o-animation-delay: 8s;
+  animation-delay: 8s;
 }
-/* line 31, _animate.scss */
+/* line 40, _animate.scss */
 .ad .msg:nth-of-type(4) {
   -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
 }
-/* line 31, _animate.scss */
+/* line 40, _animate.scss */
 .ad .msg:nth-of-type(5) {
   -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -o-animation-delay: 16s;
+  animation-delay: 16s;
 }
 
 /* line 4, _workout.scss */
