@@ -1,25 +1,4 @@
 // Advertisements
-#ad {
-  clear: both;
-  margin: 10px 0 30px;
-  color: black;
-  font-size: 2em;
-  float: left;
-}
-#newsletter {
-  height: 70px;
-  width: 70px;
-  margin-top: 10px;
-  padding: 10px 8px;
-  background-color: $base;
-  float: right;
-  font-weight: bold;
-  text-align: center;
-
-  a {
-    color: $accent;
-  }
-}
 
 .ad {
   clear: both;
@@ -77,33 +56,3 @@
   }
 }
 
-// Animation Set Up - Variables
-$ad-screen-count: 5;    //  Number of screens in the slide show
-$ad-screen-duration: 3; //  Duration each screen is displayed at full opacity
-$ad-fade-duration: 1;  //  Duration each screen takes to fade in and fade out
-
-$ad-msg-duration: $ad-fade-duration + $ad-screen-duration;  // 1 + 3 = 4. duration of one screen's
-                                                            // animation. Fade in + display
-
-$total-duration: $ad-msg-duration + $ad-screen-count;       //  4 * 5 = 20. duration of slide show
-
-
-// Animation Set Up -  Step 1
-@-webkit-keyframes adAnimation {
-  0%            { opacity: 0; }
-  5%, 20%       { opacity: 1; }
-  24.9%, 100%   { opacity: 0; }
-}
-
-// Animate the Ad - Step 2
-.ad {
-  .msg {
-    -webkit-animation: adAnimation #{$total-duration}s infinite;
-
-    @for $i from 1 through $ad-screen-count {
-      &:nth-of-type(#{$i}) {
-        -webkit-animation-delay: #{($i - 1) * $ad-msg-duration}s;
-      }
-    }
-  }
-}
